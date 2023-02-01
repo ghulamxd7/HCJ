@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        text-align: left;
+    }
+</style>
+<body>
+    <h1> simple web page which create list</h1>
+    <input type='text' id="data" />
+<button onclick="EnterData();">Add Item</button>
+<button onclick="DelData();">Remove Item</button>
+
+<ol id="print"></ol>
+<script>
+    function EnterData() {
+        // storing order list in a
+	let a = document.getElementById("print");
+    // creating list element 
+	let list = document.createElement("li");
+    // creatinga variabl b and storing entered data into it
+	var b = document.getElementById("data").value;
+    // By using textnode function 
+	var c = document.createTextNode(b);
+    //This function append an item to the end of lsit
+	list.appendChild(c); 
+	a.appendChild(list);
+    // This line clears the input area 
+    document.getElementById("data").value="";
+}
+function DelData() {
+  const a = document.getElementById("print");
+  a.removeChild(a.firstElementChild);
+}
+
+</script>
+</body>
+</html>
