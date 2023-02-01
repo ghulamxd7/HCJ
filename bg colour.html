@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #box{
+        margin: auto;
+        width: 200px;
+        margin-top: 260px;
+    }
+    button{
+        font-size: large;
+        background-color: rgb(231, 213, 213);
+        border: 0px 23px;
+    }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <button id="btn" onmouseover="changeBackground()" onmouseout="defaultbackground()">Hover here to change the colour of the Background</button>
+    </div>
+    <script>
+         const button= document.getElementById("btn");
+         function changeBackground(){
+            document.body.style.backgroundColor ='black';
+         }
+         function defaultbackground(){
+            document.body.style.backgroundColor ='white';
+         }
+
+    </script>
+</body>
+</html>
